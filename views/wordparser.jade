@@ -2,6 +2,7 @@ html
   head
     title Word Test
   body
+
     header 
         h1
             a(href="/") Word Test!
@@ -15,5 +16,7 @@ html
         article
             
             -for(var i=0; i<cnt; i++)
-                li= worddata[i]
+                -var link = "https://endic.naver.com/search.nhn?sLn=kr&dicQuery=" +worddata[i] +"&x=0&y=0&query=" + worddata[i] +"&target=endic&ie=utf8&query_utf=&isOnlyViewEE=N";
+                li
+                    a(href=link)= worddata[i]
 
